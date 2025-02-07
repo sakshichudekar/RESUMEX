@@ -1,0 +1,89 @@
+<html>
+<head>
+    <style>
+    
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color:white;
+            text-align: center;
+            margin: 20px;
+        }
+        .border 
+        {
+        font-size: 48px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 
+        -2px -1px 0 #0c0c0c, 
+        2px -1px 0 #000,  
+        -1px 1px 0 #000, 
+        1px 1px 0 #000; 
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .tile {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px black;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .tile:hover {
+            transform: scale(1.05);
+        }
+        .tile img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .tile p {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="border">SOME OF THE EXAMPLES OF COVER LETTERS</h1>
+
+
+    <div class="container">
+        <div class="tile" onclick="openPage('nursing.html')">
+            <img src="https://cdn.enhancv.com/images/1098/i/aHR0cHM6Ly9jZG4uZW5oYW5jdi5jb20vcHJlZGVmaW5lZC1leGFtcGxlcy9BU2lZMFVMMDBOOHg1ZndBd1hHVXJpOWVJMFNIR2JWVjNUbWdnaGY1L2ltYWdlLnBuZw~~.png">
+            <p><b>Wasim</b></p>
+        </div>
+        <div class="tile" onclick="openPage('teacher.html')">
+            <img src="https://imgv2-1-f.scribdassets.com/img/document/349434376/original/4e46da350c/1686483577?v=1">
+            <p><b>Shruti sathe</b> </p>
+        </div>
+        <div class="tile" onclick="openPage('internship.html')">
+            <img src="https://www.resumebuilder.com/wp-content/themes/resumebuilder/getPdfThumbnail.php?pdf=https://www.resumebuilder.com/wp-content/uploads/2022/02/Cosmetologist-Example-3.pdf">
+            <p><b>Prathmaesh</b></p>
+        </div>
+        <div class="tile" onclick="openPage('accountant.html')">
+            <img src="https://www.dayjob.com/wp-content/uploads/2020/06/Diversity-Manager-cover-letter-example-4.jpg.webp">
+            <p><b>Swapnil</b></p>
+        </div>
+        <div class="tile" onclick="openPage('college_student.html')">
+            <img src="https://www.dayjob.com/wp-content/uploads/2020/06/Diversity-Manager-cover-letter-example-4.jpg.webp">
+            <p><b>Prathamesh</b></p>
+        </div>
+        <div class="tile" onclick="openPage('high_school_student.html')">
+            <img src="https://www.dayjob.com/wp-content/uploads/2020/06/Diversity-Manager-cover-letter-example-4.jpg.webp">
+            <p><b>Amit Jagtap</b></p>
+        </div>
+    </div>
+
+    <script>
+        function openPage(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>
