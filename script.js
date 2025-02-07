@@ -1,47 +1,56 @@
-function downloadImageAsDoc(imageName) {
-    var imageUrl = 'image1/' + imageName; // Correct path for your images
+async function downloadImageAsDoc(imageUrl) {
+    try {
+        // Wait until docx.js is loaded
+        if (!window.docx) {
+            throw new Error("docx.js library is not loaded. Check script order in HTML.");
+        }
 
-    // Fetch the image and convert it to base64
-    fetch(imageUrl)
-        .then(response => response.blob())
-        .then(blob => {
-            var reader = new FileReader();
-            reader.readAsDataURL(blob);
-            reader.onloadend = function () {
-                var base64Image = reader.result;
-                generateDocx(base64Image, imageName);
-            };
-        })
-        .catch(error => console.error('Error loading image:', error));
-}
+        // Fetch image
+        const response = await fetch(imageUrl);
+        if (!response.ok) {
+            throw new Error(`Image fetch failed! Status: ${response.status}`);
+        }
 
-function generateDocx(base64Image, imageName) {
-    var zip = new JSZip();
+        const blob = await response.blob();
+        const arrayBuffer = await blob.arrayBuffer();
 
-    // Word document structure with embedded base64 image
-    var docTemplate = `
-        <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
-            <w:body>
-                <w:p>
-                    <w:r>
-                        <w:t>Resume Template:</w:t>
-                    </w:r>
-                </w:p>
-                <w:p>
-                    <w:r>
-                        <w:pict>
-                            <v:shape style="width:500px;height:600px;"> 
-                                <v:imagedata src="data:image/png;base64,${base64Image.split(',')[1]}" />
-                            </v:shape>
-                        </w:pict>
-                    </w:r>
-                </w:p>
-            </w:body>
-        </w:document>
-    `;
+        // Destructure docx components
+        const { Document, Packer, Paragraph, ImageRun, TextRun } = window.docx;
 
-    zip.file("word/document.xml", docTemplate);
-    zip.generateAsync({ type: "blob" }).then(function (content) {
-        saveAs(content, imageName.replace('.jpg', '.docx')); // Save as .docx
-    });
+        // Create a Word document
+        const doc = new Document({
+            sections: [
+                {
+                    children: [
+                        new Paragraph({
+                            children: [
+                                new TextRun({ text: "Resume Template", bold: true, size: 32 }),
+                            ],
+                        }),
+                        new Paragraph({
+                            children: [
+                                new ImageRun({
+                                    data: new Uint8Array(arrayBuffer),
+                                    transformation: { width: 400, height: 600 },
+                                }),
+                            ],
+                        }),
+                        new Paragraph({
+                            children: [
+                                new TextRun({ text: "This document is editable.", italics: true }),
+                            ],
+                        }),
+                    ],
+                },
+            ],
+        });
+
+        // Generate and download the .docx file
+        const docBlob = await Packer.toBlob(doc);
+        saveAs(docBlob, "Resume_Template.docx");
+
+    } catch (error) {
+        console.error("Error:", error);
+        alert(error.message);
+    }
 }
