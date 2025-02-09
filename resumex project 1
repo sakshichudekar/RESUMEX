@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            width: 90%;
+            margin-left: 67px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: red;
+            line-height: 1;
+            text-transform: uppercase;
+            font-family: inter, montserrat;
+
+        }
+
+        .logo span {
+            display: block;
+            font-size: 40px;
+            padding-left: 47px;
+        }
+
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-family: inter, montserrat;
+        }
+
+        /* NAV BAR CSS END */
+
+
+
+        h1 {
+            font-family: inter, montserrat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 73px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            text-align: center;
+            width: 90%;
+            height: 50vh;
+            border: 1px solid green;
+            background-color: rgb(13, 205, 125);
+            margin-top: 6px;
+            border-top: 4px solid black;
+            margin-left: 67px;
+
+        }
+
+        #x {
+            font-size: xx-large;
+        }
+
+        .text {
+            margin-top: 8%;
+            font-size: x-large;
+            margin-left: 10%;
+            font-family: inter, montserrat;
+        }
+
+
+
+        .zx {
+            display: flex;
+            justify-content: space-around;
+            font-size: xxx-large;
+        }
+
+        .info {
+            margin-left: 30%;
+            margin-top: -280px;
+            font-family: inter, montserrat;
+        }
+
+        #y {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .abc {
+            margin-top: 12%;
+            margin-left: -15%;
+        }
+
+        .xyz {
+
+            height: 80vh;
+            width: 60%;
+            margin-left: 67px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 4%;
+            margin-left: 18%;
+
+        }
+
+        .u {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            background-color: lightgray;
+            background-image: url(resume.img);
+
+        }
+    </style>
+    <header>
+        <div class="logo">
+            RESUME <span>X</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">RESUMES</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CV</a></li>
+                <li><a href="#">COVER LETTERS</a></li>
+                <li><a href="#">CONTACT-US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- NAV BAR HTML END -->
+
+    <div class="box">
+        <h1 id="x">JUST</h1>
+        <h1 id="x">THREE SIMPLE STEPS</h1>
+
+    </div>
+
+    <div class="text">
+        <p><b>Filter</b></p>
+        <br>
+        <p><b>HEADSHOT</b></p>
+        <br>
+
+        <label>
+            <input type="checkbox"> With Photo
+        </label>
+        <br>
+
+        <label>
+            <input type="checkbox"> Without photo
+        </label>
+        <br>
+        <br>
+
+
+        <p><b>COLUMNS</b></p><br>
+        <label>
+            <input type="checkbox"> 1 column
+        </label>
+        <br>
+        <label>
+            <input type="checkbox"> 2 column
+        </label>
+
+
+
+        <div class="info">
+            <h2 class="zx">BEST TEMPLATES<h2>
+                    <h2 class="zx">FOR 3-4 YEARS </h2><br>
+                    <h2 class="zx"> OF EXPERIENCE</h2><br>
+        </div>
+
+
+
+        <div class="abc">
+            <h1 id="y">YOU CAN ALWAYS CHANGE YOUR</h1>
+            <h1 id="y">TEMPLATE LATER.</h1>
+        </div>
+    </div>
+
+
+
+    <div class="xyz">
+        <div class="u"></div>
+        <div class="u"></div>
+        <div class="u "></div>
+        <div class="u "></div>
+        <div class="u "></div>
+        <div class="u "></div>
+        <div class="u "></div>
+        <div class="u "></div>
+        <div class="u "></div>
+
+    </div>
+
+</body>
+
+</html>
