@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Resources</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            width: 90%;
+            margin-left: 1%;
+            border-bottom: 2px solid black;
+
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            line-height: 1;
+            text-transform: uppercase;
+            font-family: inter, montserrat;
+
+        }
+
+        .logo span {
+            display: block;
+            font-size: 40px;
+            padding-left: 47px;
+        }
+
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-family: inter, montserrat;
+            cursor: default;
+        }
+        
+
+
+
+        .head {
+            align-content: center;
+
+        }
+
+        body {
+            font-family: inter, montserrat;
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        h1,
+        h2 {
+            color: #000000;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left,
+        .middle,
+        .right {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .left img,
+        .right img {
+            width: 142px;
+            margin-left: 38px;
+            margin-right: 40px;
+            margin-bottom: 80px;
+            margin-top: 56px;
+        }
+
+        .middle {
+            text-align: left;
+            flex: 2;
+            max-width: 600px;
+        }
+
+        .right {
+            margin-top: 270px;
+            position: relative;
+        }
+
+        .x {
+            width: auto;
+        }
+
+        .y  {
+            padding-top: 400px;
+        }
+
+        .z{
+            padding-top: 490px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .header1 {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            margin-left: 400px;
+            margin-right: 400px;
+            border-radius: 8px;
+            
+        }
+        
+        .left-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+        
+        .left-content h2 {
+            font-size: 22px;
+            font-weight: bold;
+            text-align: left;
+        }
+        
+        .left-content p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-align: left;
+            align-items: left;
+        }
+        .left-content a .btn{
+            align-items: left;
+        }
+        
+        .right-content {
+            flex-shrink: 0;
+        }
+        
+        .right-content img {
+            width: 400px; 
+            height: 250px;
+            border-radius: 8px;
+        }
+        
+
+        .templates {
+            padding-left: 215px;
+            display: flex;
+            justify-content: left;
+            gap: 20px;
+            flex-wrap: wrap;
+            perspective: 1000px;
+            /* Enables 3D effect */
+        }
+
+        .template {
+            width: 220px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transform-style: preserve-3d;
+        }
+
+        .template:hover {
+            transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .template img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #00c8aa;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            align-items: flex-start;
+        }
+        .btn:hover{
+            
+
+        }
+
+
+        .question-box {
+            background-color: #ffffff;
+            border: 2px solid black;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out;
+            transition: all 0.3s ease;
+            
+        }
+
+        .question-box h2 {
+            margin-top: 0;
+        }
+
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .question-box:hover {
+            box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.797);
+            transform: translateY(-5px);
+        }
+
+        .left img,
+        .right img {
+            width: 142px;
+            margin: 38px;
+            margin-bottom: 71px;
+            margin-top: 56px;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            RESUME <span>X</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">RESUMES</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CV</a></li>
+                <li><a href="#">COVER LETTERS</a></li>
+                <li><a href="#">CONTACT-US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- NAV BAR HTML END -->
+
+    <div class="head">
+        <h1>CV RESOURCES</h1>
+    </div>
+    <div class="container">
+        <div class="left">
+            <img src="cv.png" alt="CV Icon">
+            <br>
+            <img class="y" src="http://st2.depositphotos.com/5576514/8373/v/450/depositphotos_83733976-stock-illustration-cv-businessman.jpg" alt="how to write cv">
+        </div>
+
+        <div class="middle">
+
+            <div class="question-box">
+                <h2>What is a CV (Curriculum Vitae)?</h2>
+                <p>CV (short for Curriculum Vitae) is the Latin word for "course of life."</p>
+                <p>In a nutshell, a CV is a summary of who you are as a professional, including your work history,
+                    education, and skills. Done right, a CV is supposed to “sell you” to potential employers and land
+                    you a job.</p>
+            </div>
+
+
+            <div class="question-box">
+                <h2>What’s the Difference Between a CV and a Resume?</h2>
+                <p>Technically speaking, a CV and a resume are the same document. The only difference is that Americans
+                    call it a "resume," while Europeans and others refer to it as a CV.</p>
+                <p>A European CV can be between two and three pages long, depending on experience. A US resume is
+                    usually one or two pages max.</p>
+                <p>For more on the <a href="#">CV vs Resume</a> topic, check out our article.</p>
+            </div>
+
+
+            <div class="question-box">
+                <h2>How to Write a CV?</h2>
+                <p class="x">There’s a lot that goes into writing an attention-grabbing CV, so you’re better off reading
+                    our comprehensive guide to improve your chances of getting hired.
+                <ul>
+                    That said, here are some effective tips to get you started:
+                    <li>Pick a CV template that suits your industry.</li>
+                    <li>Keep the layout professional with consistent headings, white space, and a readable font.</li>
+                    <li>Add essential contact details (name, job title, phone number, email, LinkedIn).</li>
+                    <li>Write a concise summary highlighting your top achievements.</li>
+                    <li>Showcase work experience with quantifiable achievements.</li>
+                    <li>Keep the education section brief, mentioning only the highest degree.</li>
+                    <li>List relevant soft and hard skills.</li>
+                    <li>Optionally, include sections like certifications, languages, or personal projects.</li>
+                    <li>Follow the tips in our CV builder to help you polish your CV.</li>
+                </ul>
+                </p>
+            </div>
+
+
+            <div class="question-box">
+                <h2>How Long Should a CV Be?</h2>
+                <p class="x">
+                    For most jobs, a CV can be between one and three pages.
+                    That said, we always recommend keeping your CV short and to the point (i.e. one page long). The more
+                    concise you make your CV, the more likely it is for the hiring manager to read it from start to
+                    finish.
+                    If you’re based in the US, though, and you’re applying for a job or admission in academia, your CV
+                    can be as long as it needs to reflect your lengthy academic career (i.e. eight pages or more).
+                </p>
+            </div>
+
+        </div>
+
+        <div class="right">
+            <img src="curriculum.png" alt="CV vs Resume">
+
+            <img class="z"  src="https://st3.depositphotos.com/3369547/13825/v/450/depositphotos_138254710-stock-illustration-cv-or-resume-related-icons.jpg" alt="how long must be">
+
+        </div>
+    </div>
+
+
+    <div class="header1">
+        <h2>Choose a Professional CV Template</h2>
+        <p>Pick one of our CV templates, each meticulously designed with leading HR firms from around the world.</p>
+        <a href="#" class="btn">Start with Random Template</a>
+    </div>
+    
+
+    <div class="container">
+        <div class="templates">
+            <div class="template">
+                <img src="https://d.novoresume.com/images/doc/creative-cv-template.png" alt="Creative CV">
+                <h4>Creative</h4>
+                <p>Perfect for startups and young companies.</p>
+            </div>
+            <div class="template">
+                <img src="https://d.novoresume.com/images/doc/basic-cv-template.png" alt="Basic CV">
+                <h4>Basic</h4>
+                <p>A simple and clean CV for all industries.</p>
+            </div>
+            <div class="template">
+                <img src="https://d.novoresume.com/images/doc/skill-based-cv-template.png" alt="Skill-Based CV">
+                <h4>Skill-Based</h4>
+                <p>Ideal for changing careers and industries.</p>
+            </div>
+            <div class="template">
+                <img src="https://d.novoresume.com/images/doc/minimalist-cv-template.png" alt="Minimalist CV">
+                <h4>Minimalist</h4>
+                <p>Perfect for corporate jobs in banking and law.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
